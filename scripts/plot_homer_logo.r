@@ -6,7 +6,7 @@ homer_motif <- args[1]
 
 data <- read.delim(homer_motif)
 
-mat <- t(sapply(data[2:nrow(data),1:4], as.numeric, simplify = "matrix"))
+mat <- t(sapply(data[1:nrow(data),1:4], as.numeric, simplify = "matrix"))
 rownames(mat) <- c("A","C","G","T")
 
 p.width <- length(mat[1,]) * 0.5
